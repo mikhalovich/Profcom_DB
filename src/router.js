@@ -12,6 +12,12 @@ export default new Router({
       path: "/",
       name: "home",
       component: Home
+    },
+    {
+      path: "/login",
+      name: "login",
+      meta: { layout: "login" },
+      component: () => import("./views/Login.vue")
     }
   ]
 });
