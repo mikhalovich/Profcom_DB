@@ -16,7 +16,7 @@
       </a>
     </li>
     <li>
-      <a href="input.html">
+      <a href="#" @click="$emit('exit')">
         <i class="material-icons left">exit_to_app</i>Выход
       </a>
     </li>
@@ -26,7 +26,7 @@
 <script>
 export default {
   mounted() {
-    M.Sidenav.init(document.querySelectorAll(".sidenav"), {});
+    this.side = M.Sidenav.init(document.querySelectorAll(".sidenav"), {});
   }
 };
 </script>
