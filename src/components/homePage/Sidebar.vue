@@ -26,7 +26,7 @@
 <script>
 export default {
   mounted() {
-    this.side = M.Sidenav.init(document.querySelectorAll(".sidenav"), {});
+    M.Sidenav.init(document.querySelectorAll(".sidenav"), {});
   }
 };
 </script>
