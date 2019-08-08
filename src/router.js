@@ -19,6 +19,12 @@ export default new Router({
       name: "login",
       meta: { layout: "login" },
       component: () => import("./views/Login.vue")
+    },
+    {
+      path: "/detail",
+      name: "detail",
+      meta: { layout: "home" },
+      component: () => import("./views/Detail.vue")
     }
   ]
 });

@@ -37,13 +37,13 @@
           <tr>
             <td>123123</td>
             <td>
-              <a class="modal-trigger" href="#modal2">Иванов Иван Иванович</a>
+              <router-link class="modal-trigger" to="/detail">Иванов Иван Иванович</router-link>
             </td>
           </tr>
           <tr>
             <td>345212</td>
             <td>
-              <a class="modal-trigger" href="#modal2">Иванов Иван Иванович</a>
+              <router-link class="modal-trigger" to="/detail">Иванов Иван Иванович</router-link>
             </td>
           </tr>
         </tbody>
@@ -55,6 +55,7 @@
 <script>
 export default {
   name: "home",
+
   mounted() {
     M.FormSelect.init(document.querySelectorAll("select"), {});
   }
