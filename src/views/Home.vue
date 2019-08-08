@@ -2,25 +2,8 @@
   <div>
     <div class="container">
       <div class="row">
-        <div class="input-field col l3 s6">
-          <select>
-            <option value disabled selected>Сортировать</option>
-            <option value="1">По имени</option>
-            <option value="2">По номеру</option>
-          </select>
-        </div>
-        <div class="input-field col l3 s6">
-          <select>
-            <option value disabled selected>Нет в АСУ</option>
-            <option value="1">Показывать</option>
-            <option value="2">Не показывать</option>
-          </select>
-        </div>
-        <div class="col l4 offset-l2">
-          <label for>
-            <h5>Количество записей: 123456789</h5>
-          </label>
-        </div>
+        <sort />
+        <AmountOfRecords />
       </div>
     </div>
 
@@ -53,11 +36,17 @@
 </template>
 
 <script>
+import sort from "@/components/homePage/sort";
+import AmountOfRecords from "@/components/homePage/AmountOfRecords";
 export default {
   name: "home",
 
   mounted() {
     M.FormSelect.init(document.querySelectorAll("select"), {});
+  },
+  components: {
+    sort,
+    AmountOfRecords
   }
 };
 </script>
