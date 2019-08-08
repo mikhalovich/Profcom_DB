@@ -47,3 +47,8 @@ h6 {
   height: 100vh;
   background: #637bff;
 }
+.fixed-action-btn {
+  bottom: 2rem;
+  left: 2rem;
+  right: unset;
+}

@@ -8,6 +8,7 @@
 
 <script>
 import LoginLayout from "./layouts/LoginLayout";
+import HomeLayout from "./layouts/HomeLayout";
 export default {
   computed: {
     layout() {
@@ -15,7 +16,8 @@ export default {
     }
   },
   components: {
-    LoginLayout
+    LoginLayout,
+    HomeLayout
   }
 };
 </script>
