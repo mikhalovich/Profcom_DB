@@ -1,6 +1,6 @@
 <template>
   <div>
-    <floatin-button />
+    <floating-button />
     <div class="container">
       <div class="row">
         <i class="material-icons left md-40">assignment_ind</i>
@@ -11,570 +11,62 @@
         <li>
           <div class="collapsible-header">Личная информация</div>
           <div class="collapsible-body">
-            <form>
-              <div class="row z-depth-1">
-                <div class="row">
-                  <h6 class="center">Личная информация студента</h6>
-                </div>
-                <div class="row">
-                  <div class="input-field col s3">
-                    <input id="number" type="number" class="validate" min="1" />
-                    <label for="number">Номер</label>
-                  </div>
-                  <div class="input-field col s9">
-                    <input id="name" type="text" class="validate" />
-                    <label for="name">ФИО</label>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="input-field col s12">
-                    <input id="date" type="text" class="datepicker validate" />
-                    <label for="date">Дата рождения</label>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="input-field col s12">
-                    <input id="address" type="text" class="validate" />
-                    <label for="address">Адрес</label>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="input-field col l3 m6 s6">
-                    <input id="telNumberFirst" type="text" class="validate" />
-                    <label for="telNumberFirst">Телефон №1</label>
-                  </div>
-                  <div class="input-field col l3 m6 s6">
-                    <input id="telNumberSecond" type="text" class="validate" />
-                    <label for="telNumberSecond">Телефон №2</label>
-                  </div>
-                  <div class="input-field col s6">
-                    <select>
-                      <option value disabled selected>Статус</option>
-                      <option value="1">Нет</option>
-                      <option value="2">В отпуске</option>
-                      <option value="3">Отчислен</option>
-                      <option value="4">Военная служба</option>
-                      <option value="5">Учится</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-              <div class="row z-depth-1">
-                <div class="row">
-                  <h6 class="center">Паспортные данные студента</h6>
-                </div>
-                <div class="row">
-                  <div class="input-field col s2">
-                    <input id="seriesOfPassport" type="text" class="validate" />
-                    <label for="seriesOfPassport">Серия</label>
-                  </div>
-                  <div class="input-field col s4">
-                    <input id="numberOfPassport" type="text" class="validate" />
-                    <label for="numberOfPassport">Номер</label>
-                  </div>
-                  <div class="input-field col s6">
-                    <input id="issued" type="text" class="validate" />
-                    <label for="issued">Кем выдан</label>
-                  </div>
-                  <div class="row">
-                    <div class="input-field col s12">
-                      <input id="dateIssued" type="text" class="datepicker validate" />
-                      <label for="dateIssued">Дата выдачи</label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </form>
+            <personalInfo />
           </div>
         </li>
         <li>
           <div class="collapsible-header">Профессиональная направленность</div>
           <div class="collapsible-body">
-            <form>
-              <div class="row z-depth-1">
-                <div class="row">
-                  <h6 class="center">Информация об учебе студента в университете</h6>
-                </div>
-                <div class="row">
-                  <div class="input-field col s12">
-                    <select>
-                      <option value disabled selected>Факультет</option>
-                      <option value="1">Военный</option>
-                      <option value="2">Инженерно-строительный</option>
-                      <option value="3">Педагогический</option>
-                      <option value="4">Биологии и экологии</option>
-                      <option value="5">Инновационных технологий машиностроения</option>
-                      <option value="6">Искусств и дизайна</option>
-                      <option value="7">Истории,коммуникации и туризма</option>
-                      <option value="8">Математики и информатики</option>
-                      <option value="9">Психологии</option>
-                      <option value="10">Физической культуры</option>
-                      <option value="11">Экономики и управления</option>
-                      <option value="12">Физико-технический</option>
-                      <option value="13">Филологический</option>
-                      <option value="14">Юридический</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="input-field col l2 s6">
-                    <input id="stage" type="text" class="validate" />
-                    <label for="stage">Курс</label>
-                  </div>
-                  <div class="input-field col l2 s6">
-                    <input id="group" type="text" class="validate" />
-                    <label for="group">Группа</label>
-                  </div>
-                  <div class="input-field col s4">
-                    <select>
-                      <option value disabled selected>Форма обучения</option>
-                      <option value="1">Бюджетная</option>
-                      <option value="2">Платная</option>
-                    </select>
-                  </div>
-                  <div class="input-field col s4">
-                    <input id="numberRecordBook" type="text" class="validate" />
-                    <label for="numberRecordBook">Номер зачетки</label>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="input-field col s12">
-                    <select>
-                      <option value disabled selected>Специальность</option>
-                      <option value="1"></option>
-                      <option value="2"></option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-            </form>
+            <professionalOrientation />
           </div>
         </li>
         <li>
           <div class="collapsible-header">Профсоюзная ориентированность</div>
           <div class="collapsible-body">
-            <form>
-              <div class="row z-depth-1">
-                <div class="row">
-                  <h6 class="center">Профсоюзная информация о студенте</h6>
-                </div>
-                <div class="row">
-                  <div class="input-field col s6">
-                    <select>
-                      <option value disabled selected>Членство в профсоюзе</option>
-                      <option value="1">Да</option>
-                      <option value="2">Нет</option>
-                    </select>
-                  </div>
-                  <div class="input-field col s6">
-                    <input id="numberOfTicket" type="text" class="validate" />
-                    <label for="numberOfTicket">Номер билета</label>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="input-field col s12">
-                    <input id="dateOfIssuedByTicket" type="text" class="datepicker validate" />
-                    <label for="dateOfIssuedByTicket">Дата выдачи профбилета</label>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="input-field col s12">
-                    <input id="position" type="text" class="validate" />
-                    <label for="position">Выборная должность</label>
-                  </div>
-                </div>
-              </div>
-              <div class="row z-depth-1">
-                <div class="row">
-                  <h6 class="center">Оплата членских взносов</h6>
-                </div>
-                <div class="row">
-                  <label class="col s4">Вид оплаты:</label>
-
-                  <label class="col s3">
-                    <input name="group1" type="radio" checked />
-                    <span>наличными</span>
-                  </label>
-
-                  <label class="col s4">
-                    <input name="group1" type="radio" />
-                    <span>из стипендии</span>
-                  </label>
-                </div>
-                <div class="row">
-                  <div class="container">
-                    <div class="row">
-                      <table class="highlight">
-                        <thead>
-                          <tr>
-                            <th>Период</th>
-                            <th>Сумма</th>
-                          </tr>
-                        </thead>
-
-                        <tbody>
-                          <tr>
-                            <td>Alvin</td>
-
-                            <td>$0.87</td>
-                          </tr>
-                          <tr>
-                            <td>Alan</td>
-
-                            <td>$3.76</td>
-                          </tr>
-                          <tr>
-                            <td>Jonathan</td>
-
-                            <td>$7.00</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                    <div class="row">
-                      <a
-                        href="#!"
-                        class="modal-close waves-effect btn-small col s2 offset-s3"
-                      >Добавить</a>
-                      <a
-                        href="#!"
-                        class="modal-close waves-effect btn-small col s2 offset-s2"
-                      >Удалить</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </form>
+            <profcomInformation />
           </div>
         </li>
         <li>
           <div class="collapsible-header">Социальные показатели</div>
           <div class="collapsible-body">
-            <form>
-              <div class="row z-depth-1">
-                <div class="row">
-                  <h6 class="center">Социальные показатели</h6>
-                </div>
-                <div class="container">
-                  <div class="row">
-                    <ul>
-                      <li>
-                        <label>
-                          <input type="checkbox" class="filled-in" />
-                          <span>Сирота</span>
-                        </label>
-                      </li>
-                      <li>
-                        <label>
-                          <input type="checkbox" class="filled-in" />
-                          <span>Многодетная семья</span>
-                        </label>
-                      </li>
-                      <li>
-                        <label>
-                          <input type="checkbox" class="filled-in" />
-                          <span>Семейные</span>
-                        </label>
-                      </li>
-                      <li>
-                        <label>
-                          <input type="checkbox" class="filled-in" />
-                          <span>Инвалиды</span>
-                        </label>
-                      </li>
-                      <li>
-                        <label>
-                          <input type="checkbox" class="filled-in" />
-                          <span>ЧАЭС по статьям</span>
-                        </label>
-
-                        <div class="input-field">
-                          <select>
-                            <option value disabled selected>Статья</option>
-                            <option value="18"></option>
-                            <option value="19"></option>
-                            <option value="20"></option>
-                            <option value="21"></option>
-                            <option value="22"></option>
-                            <option value="23"></option>
-                            <option value="24"></option>
-                            <option value="25"></option>
-                          </select>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="row z-depth-1">
-                <div class="row">
-                  <h6 class="center">Дети</h6>
-                </div>
-                <div class="row">
-                  <div class="container">
-                    <div class="row">
-                      <label>
-                        <input type="checkbox" class="filled-in" />
-                        <span>Имеющие детей</span>
-                      </label>
-                    </div>
-                    <div class="row">
-                      <table class="highlight">
-                        <thead>
-                          <tr>
-                            <th>№</th>
-                            <th>Дата</th>
-                          </tr>
-                        </thead>
-
-                        <tbody></tbody>
-                      </table>
-                    </div>
-                    <div class="row">
-                      <a
-                        href="#!"
-                        class="modal-close waves-effect btn-small col s2 offset-s3"
-                      >Добавить</a>
-                      <a
-                        href="#!"
-                        class="modal-close waves-effect btn-small col s2 offset-s2"
-                      >Удалить</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </form>
+            <socialIndicators />
           </div>
         </li>
         <li>
           <div class="collapsible-header">Проживание</div>
           <div class="collapsible-body">
-            <form>
-              <div class="row z-depth-1">
-                <div class="row">
-                  <h6 class="center">Место проживания</h6>
-                </div>
-                <div class="container">
-                  <ul>
-                    <li>
-                      <label>
-                        <input name="group2" type="radio" checked />
-                        <span>Неизвестно</span>
-                      </label>
-                    </li>
-                    <li>
-                      <label>
-                        <input name="group2" type="radio" checked />
-                        <span>Городской</span>
-                      </label>
-                    </li>
-                    <li>
-                      <label>
-                        <input name="group2" type="radio" checked />
-                        <span>Лишен прав проживания в общежитии</span>
-                      </label>
-                    </li>
-                    <li>
-                      <label>
-                        <input name="group2" type="radio" checked />
-                        <span>Иногородний не в общежитии</span>
-                      </label>
-                    </li>
-                    <li>
-                      <label>
-                        <input name="group2" type="radio" checked />
-                        <span>Иногородний в общежитии</span>
-                      </label>
-                    </li>
-                    <li>
-                      <div class="input-field">
-                        <select disabled>
-                          <option value disabled selected>Номер общежития</option>
-                          <option value="1"></option>
-                          <option value="2"></option>
-                        </select>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </form>
+            <placeOfResidence />
           </div>
         </li>
 
         <li>
           <div class="collapsible-header">Материальная помощь</div>
           <div class="collapsible-body">
-            <form action>
-              <div class="row z-depth-1">
-                <div class="row">
-                  <h6 class="center">Получение материальной помощи</h6>
-                </div>
-                <div class="row">
-                  <div class="container">
-                    <div class="row">
-                      <table class="highlight">
-                        <thead>
-                          <tr>
-                            <th>Дата</th>
-                            <th>Сумма</th>
-                          </tr>
-                        </thead>
-
-                        <tbody></tbody>
-                      </table>
-                    </div>
-                    <div class="row">
-                      <a
-                        href="#!"
-                        class="modal-close waves-effect btn-small col s2 offset-s3"
-                      >Добавить</a>
-                      <a
-                        href="#!"
-                        class="modal-close waves-effect btn-small col s2 offset-s2"
-                      >Удалить</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </form>
+            <materialAid />
           </div>
         </li>
         <li>
           <div class="collapsible-header">Путёвки</div>
           <div class="collapsible-body">
-            <form action>
-              <div class="row z-depth-1">
-                <div class="row">
-                  <h6 class="center">Получение путёвок</h6>
-                </div>
-                <div class="row">
-                  <div class="container">
-                    <div class="row">
-                      <table class="highlight">
-                        <thead>
-                          <tr>
-                            <th>Дата</th>
-                            <th>Сумма</th>
-                          </tr>
-                        </thead>
-
-                        <tbody></tbody>
-                      </table>
-                    </div>
-                    <div class="row">
-                      <a
-                        href="#!"
-                        class="modal-close waves-effect btn-small col s2 offset-s3"
-                      >Добавить</a>
-                      <a
-                        href="#!"
-                        class="modal-close waves-effect btn-small col s2 offset-s2"
-                      >Удалить</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </form>
+            <travelTickets />
           </div>
         </li>
         <li>
           <div class="collapsible-header">Льготные абонементы</div>
           <div class="collapsible-body">
-            <form action>
-              <div class="row z-depth-1">
-                <div class="row">
-                  <h6 class="center">Предоставление льготных абонементов</h6>
-                </div>
-                <div class="row">
-                  <div class="container">
-                    <div class="row">
-                      <table class="highlight">
-                        <thead>
-                          <tr>
-                            <th>Дата</th>
-                            <th>Сумма</th>
-                          </tr>
-                        </thead>
-
-                        <tbody></tbody>
-                      </table>
-                    </div>
-                    <div class="row">
-                      <a
-                        href="#!"
-                        class="modal-close waves-effect btn-small col s2 offset-s3"
-                      >Добавить</a>
-                      <a
-                        href="#!"
-                        class="modal-close waves-effect btn-small col s2 offset-s2"
-                      >Удалить</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </form>
+            <privileges />
           </div>
         </li>
         <li>
           <div class="collapsible-header">Деньги под отчет</div>
           <div class="collapsible-body">
-            <form action>
-              <div class="row z-depth-1">
-                <div class="row">
-                  <h6 class="center">Предоставление денег под отчет</h6>
-                </div>
-                <div class="row">
-                  <div class="container">
-                    <div class="row">
-                      <table class="highlight">
-                        <thead>
-                          <tr>
-                            <th>Дата</th>
-                            <th>Сумма</th>
-                          </tr>
-                        </thead>
-
-                        <tbody></tbody>
-                      </table>
-                    </div>
-                    <div class="row">
-                      <a
-                        href="#!"
-                        class="modal-close waves-effect btn-small col s2 offset-s3"
-                      >Добавить</a>
-                      <a
-                        href="#!"
-                        class="modal-close waves-effect btn-small col s2 offset-s2"
-                      >Удалить</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </form>
+            <money />
           </div>
         </li>
         <li>
           <div class="collapsible-header">Примечания</div>
           <div class="collapsible-body">
-            <form action>
-              <div class="row z-depth-1">
-                <div class="row">
-                  <h6 class="center">Дополнительные примечания о студенте</h6>
-                </div>
-                <div class="row">
-                  <form class="col s12">
-                    <div class="row">
-                      <div class="input-field col s12">
-                        <textarea id="textarea1" class="materialize-textarea"></textarea>
-                        <label for="textarea1">Примечания</label>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </form>
+            <notes />
           </div>
         </li>
       </ul>
@@ -583,7 +75,17 @@
 </template>
 
 <script>
-import floatinButton from "@/components/detailPage/floatingButton";
+import floatingButton from "@/components/detailPage/floatingButton";
+import personalInfo from "@/components/detailPage/items/personalInformation";
+import professionalOrientation from "@/components/detailPage/items/professionalOrientation";
+import profcomInformation from "@/components/detailPage/items/profcomInformation";
+import socialIndicators from "@/components/detailPage/items/socialIndicators";
+import placeOfResidence from "@/components/detailPage/items/placeOfResidence";
+import travelTickets from "@/components/detailPage/items/travelTickets";
+import materialAid from "@/components/detailPage/items/materialAid";
+import money from "@/components/detailPage/items/money";
+import notes from "@/components/detailPage/items/notes";
+import privileges from "@/components/detailPage/items/privileges";
 export default {
   mounted() {
     M.Collapsible.init(document.querySelectorAll(".collapsible"), {});
@@ -591,7 +93,17 @@ export default {
     M.Datepicker.init(document.querySelectorAll(".datepicker"), {});
   },
   components: {
-    floatinButton
+    floatingButton,
+    personalInfo,
+    professionalOrientation,
+    profcomInformation,
+    socialIndicators,
+    placeOfResidence,
+    travelTickets,
+    materialAid,
+    money,
+    notes,
+    privileges
   }
 };
 </script>
