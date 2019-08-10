@@ -5,14 +5,13 @@
         <h6 class="center">Профсоюзная информация о студенте</h6>
       </div>
       <div class="row">
-        <div class="input-field col s6">
-          <select>
-            <option value disabled selected>Членство в профсоюзе</option>
-            <option value="1">Да</option>
-            <option value="2">Нет</option>
-          </select>
+        <div class="input-field col s4">
+          <label>
+            <input type="checkbox" class="filled-in" />
+            <span>Членство в профсоюзе</span>
+          </label>
         </div>
-        <div class="input-field col s6">
+        <div class="input-field col s8">
           <input id="numberOfTicket" type="text" class="validate" />
           <label for="numberOfTicket">Номер билета</label>
         </div>
@@ -36,14 +35,14 @@
         <h6 class="center">Оплата членских взносов</h6>
       </div>
       <div class="row">
-        <label class="col s4">Вид оплаты:</label>
+        <label class="col s3 offset-s1">Вид оплаты:</label>
 
         <label class="col s3">
           <input name="group1" type="radio" checked />
           <span>наличными</span>
         </label>
 
-        <label class="col s4">
+        <label class="col s3">
           <input name="group1" type="radio" />
           <span>из стипендии</span>
         </label>

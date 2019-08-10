@@ -37,13 +37,14 @@
         </div>
         <div class="input-field col s6">
           <select>
-            <option value disabled selected>Статус</option>
+            <option value disabled selected>Выберите вариант</option>
             <option value="1">Нет</option>
             <option value="2">В отпуске</option>
             <option value="3">Отчислен</option>
             <option value="4">Военная служба</option>
             <option value="5">Учится</option>
           </select>
+          <label for>Статус</label>
         </div>
       </div>
     </div>

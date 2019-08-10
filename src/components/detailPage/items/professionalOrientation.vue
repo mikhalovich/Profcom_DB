@@ -7,7 +7,7 @@
       <div class="row">
         <div class="input-field col s12">
           <select>
-            <option value disabled selected>Факультет</option>
+            <option value disabled selected>Выберите вариант</option>
             <option value="1">Военный</option>
             <option value="2">Инженерно-строительный</option>
             <option value="3">Педагогический</option>
@@ -23,6 +23,7 @@
             <option value="13">Филологический</option>
             <option value="14">Юридический</option>
           </select>
+          <label>Факультет</label>
         </div>
       </div>
       <div class="row">
@@ -36,10 +37,11 @@
         </div>
         <div class="input-field col s4">
           <select>
-            <option value disabled selected>Форма обучения</option>
+            <option value disabled selected>Выберите вариант</option>
             <option value="1">Бюджетная</option>
             <option value="2">Платная</option>
           </select>
+          <label>Форма обучения</label>
         </div>
         <div class="input-field col s4">
           <input id="numberRecordBook" type="text" class="validate" />
@@ -48,11 +50,8 @@
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <select>
-            <option value disabled selected>Специальность</option>
-            <option value="1"></option>
-            <option value="2"></option>
-          </select>
+          <input id="specialty" type="text" class="validate" />
+          <label for="specialty">Специальность</label>
         </div>
       </div>
     </div>
