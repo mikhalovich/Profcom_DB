@@ -38,11 +38,8 @@
           </li>
           <li>
             <div class="input-field">
-              <select disabled>
-                <option value disabled selected>Номер общежития</option>
-                <option value="1"></option>
-                <option value="2"></option>
-              </select>
+              <input id="number" type="number" class="validate" disabled="disabled" min="1" />
+              <label for="number">Номер общежития</label>
             </div>
           </li>
         </ul>
