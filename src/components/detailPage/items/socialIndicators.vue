@@ -80,8 +80,8 @@
             </table>
           </div>
           <div class="row">
-            <a href="#!" class="modal-close waves-effect btn-small col s2 offset-s3">Добавить</a>
-            <a href="#!" class="modal-close waves-effect btn-small col s2 offset-s2">Удалить</a>
+            <a href="#!" class="waves-effect btn-small col s2 offset-s3">Добавить</a>
+            <a href="#!" class="waves-effect btn-small col s2 offset-s2">Удалить</a>
           </div>
         </div>
       </div>
