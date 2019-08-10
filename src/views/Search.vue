@@ -27,11 +27,12 @@
 import SearchFloatingButton from "@/components/searchPage/SearchFloatingButton";
 import BasicInformation from "../components/searchPage/items/BasicInformation";
 import AdditionalInformation from "../components/searchPage/items/AdditionalInformation";
+import Datepicker from "../utils/Datepicker";
 export default {
   mounted() {
     M.Collapsible.init(document.querySelectorAll(".collapsible"), {});
     M.FormSelect.init(document.querySelectorAll("select"), {});
-    M.Datepicker.init(document.querySelectorAll(".datepicker"), {});
+    Datepicker.InitDatepicker();
   },
   components: {
     SearchFloatingButton,

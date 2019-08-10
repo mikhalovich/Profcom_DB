@@ -86,11 +86,13 @@ import materialAid from "@/components/detailPage/items/materialAid";
 import money from "@/components/detailPage/items/money";
 import notes from "@/components/detailPage/items/notes";
 import privileges from "@/components/detailPage/items/privileges";
+import Datepicker from "../utils/Datepicker";
 export default {
   mounted() {
     M.Collapsible.init(document.querySelectorAll(".collapsible"), {});
     M.FormSelect.init(document.querySelectorAll("select"), {});
-    M.Datepicker.init(document.querySelectorAll(".datepicker"), {});
+
+    Datepicker.InitDatepicker();
   },
   components: {
     floatingButton,
