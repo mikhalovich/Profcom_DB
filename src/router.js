@@ -25,6 +25,12 @@ export default new Router({
       name: "detail",
       meta: { layout: "home" },
       component: () => import("./views/Detail.vue")
+    },
+    {
+      path: "/search",
+      name: "search",
+      meta: { layout: "home" },
+      component: () => import("./views/Search.vue")
     }
   ]
 });

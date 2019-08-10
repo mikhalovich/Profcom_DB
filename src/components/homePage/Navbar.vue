@@ -9,9 +9,9 @@
 
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li>
-              <a class="modal-trigger waves-effect" href="#modal1">
+              <router-link class="waves-effect" to="/search">
                 <i class="material-icons left">search</i>Поиск
-              </a>
+              </router-link>
             </li>
             <li>
               <a class="waves-effect" href="#">
