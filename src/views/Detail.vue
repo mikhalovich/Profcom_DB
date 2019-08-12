@@ -11,7 +11,7 @@
         <li>
           <div class="collapsible-header">Личная информация</div>
           <div class="collapsible-body">
-            <personalInfo />
+            <personalInfo :personall="personal" />
           </div>
         </li>
         <li>
@@ -87,9 +87,12 @@ import money from "@/components/detailPage/items/money";
 import notes from "@/components/detailPage/items/notes";
 import privileges from "@/components/detailPage/items/privileges";
 import Datepicker from "../utils/Datepicker";
+
 export default {
   mounted() {
+    // eslint-disable-next-line
     M.Collapsible.init(document.querySelectorAll(".collapsible"), {});
+    // eslint-disable-next-line
     M.FormSelect.init(document.querySelectorAll("select"), {});
 
     Datepicker.InitDatepicker();
@@ -106,7 +109,16 @@ export default {
     money,
     notes,
     privileges
+  },
+  computed: {
+    personal() {
+      for (let i = 0; i <= this.$store.getters.persons.length; i++ ) {
+        if (this.$store.getters.persons[i].id == this.$route.query.id) {
+          return this.$store.getters.persons[i];
+        }
+      }
+      return {};
+    }
   }
 };
 </script>
-

@@ -1,0 +1,110 @@
+[
+  { 
+    "id": 1,
+    "personalInformation": {
+      "fullName": "Иванов Иван Иванович",
+      "dateOfBirth": "01.09.1999",
+      "address": "г.Гродно, ул.Пушкина, д.2 ",
+      "firstNumebr": "1132123",
+      "secondNumber": "22233110",
+      "status": "Отчислен",
+      "passportSeries": "КН",
+      "passportID": "112233123",
+      "issuedBy": "Ленинское РУВД",
+      "dateOfIssue": "12.01.2006"
+    },
+    "prfessionalOrientation": {
+      "faculty": "Математики и информатики",
+      "course": "2",
+      "group": "181",
+      "formOfStudy": "Бюджетная",
+      "numberOfRecordBook": "8888888",
+      "specialty": "МАТ(НПД)"
+    },
+    "profcomInformation": {
+      "unionMembership": "Да",
+      "numberOfTicket": "123213",
+      "dateOfIssueTicket": "12.02.2015",
+      "position": "",
+      "TypeOfPayment": "Наличными",
+      "membershipFee": [
+        {
+          "date": "12.09.2017",
+          "sum": "200"
+        },
+        {
+          "date": "3.10.2017",
+          "sum": "3000"
+        },
+        {
+          "date": "14.11.2018",
+          "sum": "4000"
+        }
+      ]
+    },
+    "socialIndicators": {
+      "orphan": "Да",
+      "manyChild": "Да"
+    },
+    "placeOfResidence": {},
+    "materialAid": {},
+    "travelTickets": {},
+    "privileges": {},
+    "money": {},
+    "notes": {}
+  },
+  { 
+    "id": 2,
+    "personalInformation": {
+      "fullName": "Петров Петр Петрович",
+      "dateOfBirth": "21.11.2003",
+      "address": "г. Лида, ул.Петрова, д.34 ",
+      "firstNumebr": "1132123",
+      "secondNumber": "22233110",
+      "status": "Студент",
+      "passportSeries": "КН",
+      "passportID": "22222222222",
+      "issuedBy": "Ленинское РУВД",
+      "dateOfIssue": "12.01.2006"
+    },
+    "prfessionalOrientation": {
+      "faculty": "Филологический",
+      "course": "1",
+      "group": "101",
+      "formOfStudy": "Платная",
+      "numberOfRecordBook": "123654",
+      "specialty": "ФИЛ(НПД)"
+    },
+    "profcomInformation": {
+      "unionMembership": "Нет",
+      "numberOfTicket": "77777",
+      "dateOfIssueTicket": "12.02.2015",
+      "position": "",
+      "TypeOfPayment": "Наличными",
+      "membershipFee": [
+        {
+          "date": "12.09.2017",
+          "sum": "200"
+        },
+        {
+          "date": "3.10.2017",
+          "sum": "3000"
+        },
+        {
+          "date": "14.11.2018",
+          "sum": "4000"
+        }
+      ]
+    },
+    "socialIndicators": {
+      "orphan": "Да",
+      "manyChild": "Да"
+    },
+    "placeOfResidence": {},
+    "materialAid": {},
+    "travelTickets": {},
+    "privileges": {},
+    "money": {},
+    "notes": {}
+  }
+]
