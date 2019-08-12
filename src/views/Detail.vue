@@ -109,8 +109,13 @@ export default {
     materialAid,
     money,
     notes,
+<<<<<<< HEAD
     privileges,
     ReturnFloatingButton
+=======
+<<<<<<< HEAD
+    privileges
+>>>>>>> b0c5b6c97ad52da53ea10c6270c67ca5fa1ad79d
   },
   computed: {
     personal() {
@@ -121,6 +126,10 @@ export default {
       }
       return {};
     }
+=======
+    privileges,
+    ReturnFloatingButton
+>>>>>>> master
   }
 };
 </script>
