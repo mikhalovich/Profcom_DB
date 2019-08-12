@@ -7,33 +7,33 @@
       <div class="row">
         <div class="input-field col s3">
           <input id="number" type="number" class="validate" min="1" />
-          <label for="number">Номер</label>
+          <label for="number">{{ personall.id }}</label>
         </div>
         <div class="input-field col s9">
           <input id="name" type="text" class="validate" />
-          <label for="name">ФИО</label>
+          <label for="name">{{ personall.personalInformation.fullName }}</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
           <input id="date" type="text" class="datepicker validate" />
-          <label for="date">Дата рождения</label>
+          <label for="date">{{ personall.personalInformation.dateOfBirth }}</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
           <input id="address" type="text" class="validate" />
-          <label for="address">Адрес</label>
+          <label for="address">{{ personall.personalInformation.address }}</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col l3 m6 s6">
           <input id="telNumberFirst" type="text" class="validate" />
-          <label for="telNumberFirst">Телефон №1</label>
+          <label for="telNumberFirst">{{ personall.personalInformation.firstNumebr }}</label>
         </div>
         <div class="input-field col l3 m6 s6">
           <input id="telNumberSecond" type="text" class="validate" />
-          <label for="telNumberSecond">Телефон №2</label>
+          <label for="telNumberSecond">{{ personall.personalInformation.secondNumber }}</label>
         </div>
         <div class="input-field col s6">
           <select>
@@ -55,23 +55,34 @@
       <div class="row">
         <div class="input-field col s2">
           <input id="seriesOfPassport" type="text" class="validate" />
-          <label for="seriesOfPassport">Серия</label>
+          <label for="seriesOfPassport">{{ personall.personalInformation.passportSeries }}</label>
         </div>
         <div class="input-field col s4">
           <input id="numberOfPassport" type="text" class="validate" />
-          <label for="numberOfPassport">Номер</label>
+          <label for="numberOfPassport">{{ personall.personalInformation.passportID }}</label>
         </div>
         <div class="input-field col s6">
           <input id="issued" type="text" class="validate" />
-          <label for="issued">Кем выдан</label>
+          <label for="issued">{{ personall.personalInformation.issuedBy }}</label>
         </div>
         <div class="row">
           <div class="input-field col s12">
             <input id="dateIssued" type="text" class="datepicker validate" />
-            <label for="dateIssued">Дата выдачи</label>
+            <label for="dateIssued">{{ personall.personalInformation.dateOfIssue }}</label>
           </div>
         </div>
       </div>
     </div>
   </form>
 </template>
+
+<script>
+export default {
+  props: {
+    personall: {
+      type: Object,
+      required: true
+    }
+  }
+};
+</script>
