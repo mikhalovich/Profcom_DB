@@ -1,6 +1,7 @@
 <template>
   <div>
-    <floating-button />
+    <ReturnFloatingButton />
+    <DetailFloatingButton />
     <div class="container">
       <div class="row">
         <i class="material-icons left md-40">assignment_ind</i>
@@ -75,7 +76,7 @@
 </template>
 
 <script>
-import floatingButton from "@/components/detailPage/floatingButton";
+import DetailFloatingButton from "@/components/detailPage/DetailFloatingButton";
 import personalInfo from "@/components/detailPage/items/personalInformation";
 import professionalOrientation from "@/components/detailPage/items/professionalOrientation";
 import profcomInformation from "@/components/detailPage/items/profcomInformation";
@@ -87,6 +88,7 @@ import money from "@/components/detailPage/items/money";
 import notes from "@/components/detailPage/items/notes";
 import privileges from "@/components/detailPage/items/privileges";
 import Datepicker from "../utils/Datepicker";
+import ReturnFloatingButton from "../components/ReturnFloatingButton";
 export default {
   mounted() {
     M.Collapsible.init(document.querySelectorAll(".collapsible"), {});
@@ -95,7 +97,7 @@ export default {
     Datepicker.InitDatepicker();
   },
   components: {
-    floatingButton,
+    DetailFloatingButton,
     personalInfo,
     professionalOrientation,
     profcomInformation,
@@ -105,7 +107,8 @@ export default {
     materialAid,
     money,
     notes,
-    privileges
+    privileges,
+    ReturnFloatingButton
   }
 };
 </script>

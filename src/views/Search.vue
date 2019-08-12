@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <ReturnFloatingButton />
     <SearchFloatingButton />
     <div class="row">
       <i class="material-icons left md-40">search</i>
@@ -28,6 +29,7 @@ import SearchFloatingButton from "@/components/searchPage/SearchFloatingButton";
 import BasicInformation from "../components/searchPage/items/BasicInformation";
 import AdditionalInformation from "../components/searchPage/items/AdditionalInformation";
 import Datepicker from "../utils/Datepicker";
+import ReturnFloatingButton from "../components/ReturnFloatingButton";
 export default {
   mounted() {
     M.Collapsible.init(document.querySelectorAll(".collapsible"), {});
@@ -37,7 +39,8 @@ export default {
   components: {
     SearchFloatingButton,
     BasicInformation,
-    AdditionalInformation
+    AdditionalInformation,
+    ReturnFloatingButton
   }
 };
 </script>
