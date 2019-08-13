@@ -21,7 +21,7 @@
             <td>{{ number + 1 }}</td>
             <td>
               <router-link
-                :to="{ path: 'detail', query: { id: `${person.id}` } }"
+                :to="`/detail/${person.id}`"
               >
                 {{ person.personalInformation.fullName }}
               </router-link>
