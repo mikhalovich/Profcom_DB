@@ -6,34 +6,34 @@
       </div>
       <div class="row">
         <div class="input-field col s3">
-          <input id="number" type="number" class="validate" min="1" />
-          <label for="number">{{ personall.id }}</label>
+          <input id="number" type="number" class="validate" min="1" v-model="persInfo.id"/>
+          <label for="number">Номер</label>
         </div>
         <div class="input-field col s9">
-          <input id="name" type="text" class="validate" />
-          <label for="name">{{ personall.personalInformation.fullName }}</label>
+          <input id="name" type="text" class="validate" v-model="persInfo.personalInformation.fullName"/>
+          <label for="name">ФИО</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input id="date" type="text" class="datepicker validate" />
-          <label for="date">{{ personall.personalInformation.dateOfBirth }}</label>
+          <input id="date" type="text" class="datepicker validate" v-model="persInfo.personalInformation.dateOfBirth"/>
+          <label for="date">Дата рождения</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input id="address" type="text" class="validate" />
-          <label for="address">{{ personall.personalInformation.address }}</label>
+          <input id="address" type="text" class="validate" v-model="persInfo.personalInformation.address"/>
+          <label for="address">Адрес</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col l3 m6 s6">
-          <input id="telNumberFirst" type="text" class="validate" />
-          <label for="telNumberFirst">{{ personall.personalInformation.firstNumebr }}</label>
+          <input id="telNumberFirst" type="text" class="validate" v-model="persInfo.personalInformation.firstNumebr"/>
+          <label for="telNumberFirst">Телефон №1</label>
         </div>
         <div class="input-field col l3 m6 s6">
-          <input id="telNumberSecond" type="text" class="validate" />
-          <label for="telNumberSecond">{{ personall.personalInformation.secondNumber }}</label>
+          <input id="telNumberSecond" type="text" class="validate" v-model="persInfo.personalInformation.secondNumber"/>
+          <label for="telNumberSecond">Телефон №2</label>
         </div>
         <div class="input-field col s6">
           <select>
@@ -54,21 +54,21 @@
       </div>
       <div class="row">
         <div class="input-field col s2">
-          <input id="seriesOfPassport" type="text" class="validate" />
-          <label for="seriesOfPassport">{{ personall.personalInformation.passportSeries }}</label>
+          <input id="seriesOfPassport" type="text" class="validate" v-model="persInfo.personalInformation.passportSeries"/>
+          <label for="seriesOfPassport">Серия</label>
         </div>
         <div class="input-field col s4">
-          <input id="numberOfPassport" type="text" class="validate" />
-          <label for="numberOfPassport">{{ personall.personalInformation.passportID }}</label>
+          <input id="numberOfPassport" type="text" class="validate" v-model="persInfo.personalInformation.passportID"/>
+          <label for="numberOfPassport">Номер</label>
         </div>
         <div class="input-field col s6">
-          <input id="issued" type="text" class="validate" />
-          <label for="issued">{{ personall.personalInformation.issuedBy }}</label>
+          <input id="issued" type="text" class="validate" v-model="persInfo.personalInformation.issuedBy"/>
+          <label for="issued">Орган выдачи</label>
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <input id="dateIssued" type="text" class="datepicker validate" />
-            <label for="dateIssued">{{ personall.personalInformation.dateOfIssue }}</label>
+            <input id="dateIssued" type="text" class="datepicker validate" v-model="persInfo.personalInformation.dateOfIssue"/>
+            <label for="dateIssued">Дата выдачи</label>
           </div>
         </div>
       </div>
@@ -79,10 +79,13 @@
 <script>
 export default {
   props: {
-    personall: {
+    persInfo: {
       type: Object,
-      required: true
+      required: true  
     }
+  },
+  mounted() {
+    M.updateTextFields()
   }
 };
 </script>

@@ -12,7 +12,7 @@
         <li>
           <div class="collapsible-header">Личная информация</div>
           <div class="collapsible-body">
-            <personalInfo :personall="personal" />
+            <personalInfo :persInfo="personal" />
           </div>
         </li>
         <li>
@@ -115,7 +115,7 @@ export default {
   computed: {
     personal() {
       for (let i = 0; i <= this.$store.getters.persons.length; i++ ) {
-        if (this.$store.getters.persons[i].id == this.$route.query.id) {
+        if (this.$store.getters.persons[i].id == this.$route.params['id']) {
           return this.$store.getters.persons[i];
         }
       }
